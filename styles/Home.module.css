@@ -1,0 +1,23 @@
+.container {
+  /* padding: 0 2rem; */
+  padding: 0;
+}
+
+.main {
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F3F3;
+}
+
+.main ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+.main li{
+  display: inline-block;
+  margin: 20px;
+}
