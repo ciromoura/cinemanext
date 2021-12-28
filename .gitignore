@@ -1,0 +1,5 @@
+# Dependency directories
+node_modules
+
+#file with api key and url
+.lib/tmdb.js
