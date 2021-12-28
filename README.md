@@ -21,6 +21,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ## API of The Movie Database API
 
 For use [The Movie Database API](https://developers.themoviedb.org/3/) just add a file on lib folder with:
+
 `export const apiKey = 'your key';`
 `export const apiBase = 'https://api.themoviedb.org/3';`
 
