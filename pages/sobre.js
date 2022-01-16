@@ -16,13 +16,22 @@ export default function About({ author }) {
       <Navbar />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Sobre o projeto
-        </h1>
+        <div class="px-2 pt-16">
+          <div class="z-20 p-2 pb-4 bg-white rounded-md grid justify-items-center content-center">
+            <h1 class="md:text-2xl text-1xl font-bold text-emerald-500">
+             Sobre o projeto
+            </h1>
 
-        <p>Criado vendo a video aula: https://www.youtube.com/watch?v=xjrDEZQ5LnA </p>
+            <p class="pt-8 text-1sm font-bold text-indigo-500">Criado a partir da video aula: </p>
+            <a class="text-1sm font-regular text-black-500" href="https://www.youtube.com/watch?v=xjrDEZQ5LnA"> Primeiros Passos com Next.js - Bonieky Lacerda </a>
 
-        <a href="https://ciromoura.com.br"> {author} </a>
+
+            <p class="pt-8 text-1sm font-bold text-indigo-500">Feito por:</p>
+            <a class="text-1sm font-regular text-black-500" href="https://ciromoura.com.br"> {author} </a>
+
+           
+          </div>
+        </div>
 
       </main>
 
@@ -36,7 +45,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      author: "Ciro Moura"
+      author: "@CiroMoura"
     }
   };
 }
