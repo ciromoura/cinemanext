@@ -21,7 +21,7 @@ export default function MovieItem({ info }) {
             </h1>
 
             <p class="text-1sm font-bold text-indigo-500">
-              Nota: {info.vote_average}
+              Ano: {info.release_date.split('-',1)} | Nota: {info.vote_average}
             </p>
 
             <p class="text-1sm p-8 font-regular text-black-500">

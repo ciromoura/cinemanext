@@ -29,28 +29,35 @@ export default function Busca({ list }) {
             <Navbar />
 
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Busca
-                </h1>
+                <div class="px-2 pt-16">
+                    <div class="z-20 p-2 pb-4 bg-white rounded-md grid justify-items-center content-center">
+                        <h1 class="md:text-2xl text-1xl font-bold text-emerald-500 mb-4">
+                            Buscar
+                        </h1>
 
-                <input type="text" value={searchText} onChange={e => setSearchText(e.target.value)} />
-                <button onClick={handleSearch}>Buscar</button>
+                        <div class="flex flex-row">
+                            <input class="rounded-md border p-1 mr-4" type="text" value={searchText} onChange={e => setSearchText(e.target.value)} />
+                            <button class="rounded-md border py-1 px-2 bg-indigo-500 text-white" onClick={handleSearch}>Buscar</button>
+                        </div>
 
-                <hr />
+                        <div class="h-full bg-white sm:ml-32 rounded-md">
+                            <ul class="grid md:grid-cols-4 grid-cols-1 p-2">
+                                {movieList.map(item => (
+                                    <li class="grid grid-cols-1 bg-emerald-500 hover:bg-emerald-400 rounded-lg">
+                                        <a href={`movie/${item.id}`} class="hover:bg-black-700">
+                                            <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} class="w-full h-60 object-cover rounded-lg"/>
+                                            <div class="relative p-2 col-start-1 row-start-1 flex flex-col-reverse">
+                                                <p class="mt-1 text-lg font-semibold text-white">{item.title}</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                <ul>
-                    {movieList.map(item => (
-                        <li>
-                            <a href={`movie/${item.id}`}>
-                                <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width="150" /><br />
-                                {item.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-
+                    </div>
+                </div>
             </main>
-
 
         </div>
     )
